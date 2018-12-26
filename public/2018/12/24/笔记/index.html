@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="fanzhao的博客">
 <meta property="og:description" content="hexo+github 搭建个人博客 node环境配置linux操作系统1.打开https：//nodejs.org   下载10.14.2版本压缩包2.默认下载到/root/下载  路径下，解压：1tar -xf node-v10.14.2-linux-x64.tar 3.创建node和npm的软链接两年（能够全局使用node,npm命令）123456      ln -s /root/下载/n">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-24T09:30:04.985Z">
+<meta property="og:updated_time" content="2018-12-25T09:16:02.828Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记">
 <meta name="twitter:description" content="hexo+github 搭建个人博客 node环境配置linux操作系统1.打开https：//nodejs.org   下载10.14.2版本压缩包2.默认下载到/root/下载  路径下，解压：1tar -xf node-v10.14.2-linux-x64.tar 3.创建node和npm的软链接两年（能够全局使用node,npm命令）123456      ln -s /root/下载/n">
@@ -146,12 +146,16 @@
 <p>##进入blog目录<br>cd blog</p>
 <p>##安装项目依赖包<br>npm instal</p>
 <p>##启动项目服务<br>hexo s</p>
-<p>##预览项目<br>在浏览器输入 <a href="http://localhost:4000回车访问" target="_blank" rel="noopener">http://localhost:4000回车访问</a></p>
+<p>##预览项目<br> git push 推送<br> git pull 更新推送<br>在浏览器输入 <a href="http://localhost:4000回车访问" target="_blank" rel="noopener">http://localhost:4000回车访问</a></p>
+<h2 id="项目编译代码"><a href="#项目编译代码" class="headerlink" title="项目编译代码"></a>项目编译代码</h2><p> hexo g<br> 通过框架讲md格式的文档转换为heml+css+js</p>
+<p>##推送<br>1.安装deploy依赖包<br>   npm install hexo-deployer-git –save<br>2.上传<br>  hexo d</p>
+<p>##清缓存<br>  hexo clean</p>
 <p>1.安装node<br>2.安装hexo脚手架<br>3.安装git<br>   打开<a href="https://git-scm.com" target="_blank" rel="noopener">https://git-scm.com</a> 下载git安装包<br>4.初始化项目<br>   在桌面空白区域右键“git bash here”<br>   git init blog<br>5.进入blog<br>  cd blog<br>6.安装依赖<br>  npm install<br>7.启动服务<br>  hexo s<br>8.预览<br>9.切换主题<br>  浏览器打开<a href="http://www.hexo.io,搜索栏搜索miho" target="_blank" rel="noopener">www.hexo.io,搜索栏搜索miho</a><br>  在blog所在路径<br>  git clone <a href="https://github.com/WongMino/hexo-themes/miho" target="_blank" rel="noopener">https://github.com/WongMino/hexo-themes/miho</a><br>  找到blog目录的 _config.yml.修改 theme：miho<br>10.换图<br>  网站图标：blog/them/miho/source<br>  其他图：blog/them/miho/source/images</p>
+<p>  hexo g编译<br>  hexo d上传<br>  手机访问：用户名.github.io</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月24日 17:30</p>
+        <p>最后更新： 2018年12月25日 17:16</p>
         <p>原始链接： <a class="post-url" href="/2018/12/24/笔记/" title="笔记">http://yoursite.com/2018/12/24/笔记/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -262,7 +266,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#node环境配置"><span class="post-toc-text">node环境配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#linux操作系统"><span class="post-toc-text">linux操作系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#windows环境下："><span class="post-toc-text">windows环境下：</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#node环境配置"><span class="post-toc-text">node环境配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#linux操作系统"><span class="post-toc-text">linux操作系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#windows环境下："><span class="post-toc-text">windows环境下：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目编译代码"><span class="post-toc-text">项目编译代码</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -288,6 +292,34 @@
 </nav>
 
 
+
+    
+         <div id="uyan_frame"></div>
+ <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+ 
+  <!-- Valine Comments -->
+  <div class="comments vcomment" id="comments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+  <!-- Valine Comments script -->
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+      });
+      new Valine({
+          el: '#comments',
+          notify: 'false' == 'true',
+          verify: 'false' == 'true',
+          appId: "ewz5nIfFewii4cS06yRtVbWR-gzGzoHsz",
+          appKey: "XYAsefHzk6NB5uUjR4CtYR2p",
+          avatar: "mp",
+          placeholder: "123",
+          guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+          pageSize: "10"
+      })
+  </script>
+  <!-- Valine Comments end -->
 
     
 </section>
